@@ -1,8 +1,8 @@
 print("HELLO WORLD")
 
-a = 5 
+a = True
 
-if a == 5: 
-    print(a)
+if a == True: 
+    print("HELLO WORLD", a)
 else:
-    print("NOT EQUAL")
+    print("HELLO WORLD", not a)
