@@ -17,9 +17,9 @@ else:
 
 # get key or values as array/list
 
-user = {"name": "Alice", "age": 25}
+user = {"name": "Alice", "age": 20}
 user.keys()     # dict_keys(['name', 'age'])
-user.values() # dict_keys(['Alice', '25'])
+user.values() # dict_keys(['Alice', '20'])
 list(user.keys()) # ['name', 'age']
 
 
@@ -39,3 +39,8 @@ merged = {**u1, **u2}
 
 config_str = '{"server": "localhost", "port": 8080}'
 config = json.loads(config_str) 
+
+
+# update() → Merge / Add multiple keys
+
+user.update({"city": "London", "age": 22})  # {'name': 'Alice', 'age': 22, 'city': 'London'}
