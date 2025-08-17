@@ -15,6 +15,19 @@ if userDetails["name"] and userDetails["age"]:
 else:
     print("NOT FOUND")
 
+# get key or values as array/list
+
+user = {"name": "Alice", "age": 25}
+user.keys()     # dict_keys(['name', 'age'])
+user.values() # dict_keys(['Alice', '25'])
+list(user.keys()) # ['name', 'age']
+
+
+# .get(key, default) → Safe access
+
+user.get("name", "Unknown")  # Alice
+user["city"] # Throws error as no city key 
+user.get("city", "Unknown")  # Unknown
 
 # Merging Dictionaries
 
@@ -26,5 +39,3 @@ merged = {**u1, **u2}
 
 config_str = '{"server": "localhost", "port": 8080}'
 config = json.loads(config_str) 
-
-print(config["server"])
